@@ -1,0 +1,107 @@
+.header{
+	background-color: rgba(232, 232, 232, 0.35);
+    padding: 1em 0;
+    position: relative;
+
+	img{
+		margin-right: 5px;
+		width: 50px;
+	}
+	
+    h4, h5{
+    	margin: 0;
+    }
+
+    ul.navbar-nav{
+    	position: absolute;
+    	right: 65px;
+    	top: 30px;
+
+    	> li{
+    		font-family: 'Trebuchet MS';
+				font-weight: 600;
+				text-transform: uppercase;
+
+				&:hover{
+					a{
+						color: #ef4d98;
+						background-color: transparent;
+					}
+				}
+
+			> a{
+				color: #6f6f6f;
+				font-size: 15px;
+				-webkit-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+			}
+
+			&.active{
+				> a{
+					color: #ef4d98;
+				}
+			}
+    	}
+    }
+}
+
+.content{
+	padding: 10px 0;
+	
+	select{
+		width: 100%;
+		
+		option{
+			padding: 5px 8px;
+		}
+	}
+
+	.box{
+		background-color: #ffffff;
+    border-radius: 3px;
+    border: 3px solid #d2d6de;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+
+    .box-header{
+    	background-color: #00c0ef;
+	    border-radius: 3px 3px 0 0;
+	    color: #ffffff;
+	    display: block;
+	    padding: 10px;
+	    position: relative;
+
+	    .box-title{
+	    	font-size: 18px;
+	    	margin:0;
+	    }
+    }
+
+    .box-body{
+    	border-radius: 0 0 3px 3px;
+    	padding: 10px;
+    }
+
+    .box-footer{
+    	background-color: #fff;
+	    border-radius: 0 0 3px 3px;
+	    border-top: 1px solid #d1d1d1;
+	    padding: 10px;
+	    text-align: right;
+    }
+	}
+}
+
+.preloader{
+	left: -8px;
+	position: absolute;
+	top: 8px;
+
+	> i{
+		color : #ff0000;
+		font-size: 18px;
+	}
+}

@@ -1,0 +1,90 @@
+.body-bg(@image-path){
+	background: url(@image-path) repeat scroll center #000;
+}
+
+//border radius creator
+.border-radius(@radius) {
+  border-radius: @radius;
+}
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.logo-variant(@bg-color; @color: #fff; @border-bottom-color: transparent; @border-bottom-width: 0px) {
+  // background-color: @bg-color;
+  .color-transparent(@bg-color,0.8);
+  color: @color;
+  border-bottom: @border-bottom-width solid @border-bottom-color;
+  &:hover {
+    .color-transparent(darken(@bg-color, 2%),0.8);
+  }
+}
+
+.navbar-variant(@color; @font-color: rgba(255, 255, 255, 0.8); @hover-color: #f6f6f6; @hover-bg: rgba(0, 0, 0, 0.1)) {
+  // background-color: @color;
+  // background-color: @color;
+  .color-transparent(@color, 0.8);
+  //Navbar links
+  .nav > li > a {
+    color: @font-color;
+  }
+
+  .nav > li > a:hover,
+    .nav > li > a:active,
+    .nav > li > a:focus,
+    .nav .open > a,
+    .nav .open > a:hover,
+    .nav .open > a:focus {
+    background: @hover-bg;
+    color: @hover-color;
+  }
+
+  //Add color to the sidebar toggle button
+  .sidebar-toggle {
+    color: @font-color;
+    &:hover {
+      color: @hover-color;
+      background: @hover-bg;
+    }
+  }
+}
+
+.border-radius(@radius) {
+  border-radius: @radius;
+}
+//Different radius each side
+.border-radius(@top-left; @top-right; @bottom-left; @bottom-right) {
+  border-top-left-radius: @top-left;
+  border-top-right-radius: @top-right;
+  border-bottom-right-radius: @bottom-right;
+  border-bottom-left-radius: @bottom-left;
+}
+
+.box-solid-variant(@color; @text-color: #fff) {
+  border: 1px solid @color;
+  > .box-header {
+    color: @text-color;
+    background: @color;
+    background-color: @color;
+    a,
+    .btn {
+      color: @text-color;
+    }
+  }
+}
+
+.color-transparent(@color, @alpha: 1) {
+  background-color: rgba( red(@color), green(@color), blue(@color), @alpha);
+}
+
+.linear-gradient(@color1, @alpha1:1, @color2, @alpha2:1,){
+  background: linear-gradient(rgba(red(@color1), green(@color1), blue(@color1), @alpha1), rgba(red(@color2), green(@color2), blue(@color2), @alpha2)) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
